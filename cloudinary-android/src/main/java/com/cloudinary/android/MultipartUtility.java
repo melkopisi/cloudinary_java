@@ -1,18 +1,11 @@
 package com.cloudinary.android;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
+import com.cloudinary.Cloudinary;
+
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.Map;
-
-import com.cloudinary.Cloudinary;
 
 /**
  * This utility class provides an abstraction layer for sending multipart HTTP
