@@ -62,7 +62,7 @@
                     <phase>validate</phase>
                     <configuration>
                         <tasks>
-                            <copy file="src/main/AndroidManifest.xml.sample" tofile="src/main/AndroidManifest.xml"/>
+                            <copy file="${basedir}/src/main/AndroidManifest.xml.sample" tofile="src/main/AndroidManifest.xml"/>
                         </tasks>
                     </configuration>
                     <goals>
@@ -84,7 +84,7 @@
                 </execution>
             </executions>
             <configuration>
-                <file>src/main/AndroidManifest.xml</file>
+                <file>${basedir}/src/main/AndroidManifest.xml</file>
                 <replacements>
                     <replacement>
                         <token>%CLOUDINARY_URL%</token>
