@@ -5,7 +5,7 @@ jdk:
 
 android:
   components:
-    - build-tools-22.0.1
+    - build-tools-24.0.0
     - android-22
     - addon-google_apis-google-22
     - sys-img-armeabi-v7a-android-22
