@@ -1,39 +1,17 @@
 language: android
-jdk: oraclejdk7
-# Use the Travis Container-Based Infrastructure
-sudo: false
 
-env:
-  global:
-    - ANDROID_API_LEVEL=25
-    - EMULATOR_API_LEVEL=25
-    - ANDROID_BUILD_TOOLS_VERSION=25.0.2
-    - ANDROID_ABI=google_apis/x86
-    - ADB_INSTALL_TIMEOUT=20 # minutes (2 minutes by default)
+jdk:
+  - oraclejdk7
 
 android:
   components:
-    - platform-tools
-    - tools
-    - build-tools-$ANDROID_BUILD_TOOLS_VERSION
-    - android-$ANDROID_API_LEVEL
-    - android-$EMULATOR_API_LEVEL
-    # For Google APIs
-    - addon-google_apis-google-$ANDROID_API_LEVEL
-    - addon-google_apis-google-$EMULATOR_API_LEVEL
-    # Google Play Services
-    - extra-google-google_play_services
-    # Support library
-    - extra-android-support
-    # Latest artifacts in local repository
-    - extra-google-m2repository
-    - extra-android-m2repository
-    # Specify at least one system image
-    - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
-    - sys-img-armeabi-v7a-addon-google_apis-google-$EMULATOR_API_LEVEL
+    - build-tools-22.0.1
+    - android-22
+    - addon-google_apis-google-22
+    - sys-img-armeabi-v7a-android-22
 
 before_script:
-  # Create and start emulator
-  - echo no | ${ANDROID_HOME}tools/bin/avdmanager create avd --force -n test -k "system-images;android-$EMULATOR_API_LEVEL;google_apis;x86" --abi $ANDROID_ABI
-  - emulator -avd test -no-skin -no-audio -no-window &
+  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+  - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
+  - adb shell input keyevent 82 &
