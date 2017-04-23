@@ -13,10 +13,9 @@ public class ApiTest extends AbstractApiTest {
     public void testTimeoutException() throws Exception {
         // should allow listing resources
         Map<String, Object> options = new HashMap<String, Object>();
-        options.put("timeout", Integer.valueOf(10000));
+        options.put("timeout", Integer.valueOf(100));
 
         Map result = api.resources(options);
         Map resource = findByAttr((List<Map>) result.get("resources"), "public_id", "api_test");
-
     }
 }
