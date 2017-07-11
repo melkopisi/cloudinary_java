@@ -24,6 +24,14 @@ The cloudinary_java library is available in [Maven Central](http://repo1.maven.o
         <artifactId>cloudinary-android</artifactId>
         <version>1.13.0</version>
     </dependency>
+    
+
+
+## For Android just add this code to your build.gradle (Module app) 
+
+  
+	compile 'com.cloudinary:cloudinary-android:1.13.0'
+
 
 
 ## Try it right away
