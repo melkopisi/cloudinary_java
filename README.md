@@ -30,6 +30,11 @@ The cloudinary_java library is available in [Maven Central](https://repo1.maven.
         <artifactId>cloudinary-http44</artifactId>
         <version>1.13.0</version>
     </dependency>
+    
+    
+  ### Gradle
+    
+    implementation 'com.cloudinary:cloudinary-http44:1.13.0'
 
 Alternatively, download cloudinary_java from [here](https://repo1.maven.org/maven2/com/cloudinary/cloudinary-core/1.13.0/cloudinary-core-1.13.0.jar) and [here](https://repo1.maven.org/maven2/com/cloudinary/cloudinary-http44/1.13.0/cloudinary-http44-1.13.0.jar)
 and see [pom.xml](https://github.com/cloudinary/cloudinary_java/blob/master/cloudinary-http44/pom.xml) for library dependencies.
